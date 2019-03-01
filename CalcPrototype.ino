@@ -28,8 +28,8 @@
  *  Clear = 9 (w/ resistor)
  *  Addition = 8 (w/ resistor)
  *  Multiplication = 7 (w/ resistor)
- *  
  */
+
  #include<LiquidCrystal.h>
 
 //Constants
@@ -127,35 +127,3 @@ void loop() {
     lcd.print(str);       //Current Number
   }
 }
-
-
-/*-------------------------lab material---------------------------------
-  //lab material
-  lcd.setCursor(0,0); // First Row
-  lcd.print(Name);    // Print Name
-
-  lcd.setCursor(scrollCursor, 1);          // Second Row
-  lcd.print(Quote.substring(Start, Stop)); // Print only the substring between start and stop
-
-  delay(400);
-
-  lcd.clear();
-
-  if(Start == 0 && scrollCursor > 0){ // start scroll
-    scrollCursor--;
-    Stop++;
-  }
-  else if(Start == Stop){ // reset string
-    Start = Stop = 0;
-    scrollCursor = 16;    // width of screen
-  }
-  else if((Stop == Quote.length()) && (scrollCursor == 0)){ // end reached, allow to scroll off screen
-    Start++;
-  }
-  else{ //scroll text between beginning and end of quote
-    Start++;
-    Stop++;
-  }
-
-}
-*/
